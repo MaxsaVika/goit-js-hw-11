@@ -8,21 +8,116 @@
   padding: 16px;
 }
 
-.example code {
-  font-family: monospace;
-  font-size: 16px;
-  font-weight: 700;
-  background-color: #ff6b0a;
-  color: #fff;
-  padding: 2px 6px;
-  border-radius: 2px;
+body{
+  padding-top: 80px;
 }
 
-.example .background {
-  height: 240px;
-  // ❗️❗️❗️ The path to images from a SASS file
-  // is always the same as from the css folder.
-  background-image: url('../images/logo.png');
-  background-size: cover;
-  background-position: center;
+.search-wrapper{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 0;
+  background:  rgb(82, 85, 84);
+  box-shadow: 0 10px 8px -5px rgb(112 125 127 / 80%);
+  z-index: 10;
+}
+
+.search-form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-btn{
+  width: 120px;
+
+  color: rgb(82, 85, 84);
+  background: rgb(239, 192, 22);
+  cursor: pointer;
+
+  transition: transform .25s cubic-bezier(.4,0,.2,1);
+}
+
+.form-btn:hover{
+  color: rgb(36, 36, 36);
+  background: rgb(246, 200, 34);
+  transform: scale(1.07);
+}
+
+.form-input, .form-btn{
+  height: 45px;
+  padding: 5px;
+  border-radius: 20px;
+  border: none;
+}
+
+.form-input{
+  width: 240px;
+  padding-left: 10px;
+  margin-right: 15px;
+}
+
+.gallery{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+}
+
+.photo-card{
+    max-width: 380px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    // overflow: hidden;
+    transition: opacity .25s cubic-bezier(.4,0,.2,1);
+}
+
+.info-item {
+ display: flex;
+ align-items: center;
+ flex-direction: column;
+}
+
+.photo__link{
+  display: block;
+  height: 80%;
+
+  text-decoration: none;
+}
+
+.photo__link:hover {
+  cursor: zoom-in;
+}
+
+.gallery__image {
+  width: 100%;
+  height: 100%;
+
+  aspect-ratio: auto 380 / 260;
+
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 3px 4px 0 #b5b5b5;
+
+  transition: transform .25s cubic-bezier(.4,0,.2,1);
+}
+
+.gallery__image:hover {
+  transform: scale(1.06);
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 20%;
+
+  color: rgb(82, 85, 84);
+}
+
+.wrapper-load{
+padding: 5px 0 15px;
+text-align: center;
 }
