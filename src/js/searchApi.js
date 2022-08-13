@@ -8,6 +8,5 @@ export const getApiImg = async (name, page) => {
   const respons = await axios.get(
     `?key=${API_KEY}&image_type=photo&orientation=horizontal&q=${name}&safesearch=true&per_page=40&page=${page}`
   );
-  console.log('respons.data', respons.data);
   return await respons.data;
 };
